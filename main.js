@@ -80,3 +80,14 @@ const swiper3 = new Swiper('.food-slider', {
     prevEl: '.food-button-prev',
   },
 });
+
+const searchButton = document.querySelector('.mobile-search');
+const mobileSearch = document.querySelector('.input-group');
+searchButton.addEventListener('click', () => {
+  mobileSearch.classList.toggle('is-open');
+});
+if (document.documentElement.scrollWidth <= 640) {
+  swiper.destroy();
+  swiper2.destroy();
+  swiper3.destroy();
+}
